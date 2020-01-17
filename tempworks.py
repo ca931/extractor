@@ -7,8 +7,9 @@ import dns
 from pprint import pprint
 
 #Check Environment Variables Exist
+#SID = TW sid, AUTH_TOKEN = tw auth_token, CONNECT_STRING = mongo URI, API_STRING = tw api uri
 if "SID" and "AUTH_TOKEN" and "CONNECT_STRING" and "API_STRING" not in os.environ:
-    print("Error: Set environment variables SID and AUTH_TOKEN")
+    print("Error: Set environment variables: SID, AUTH_TOKEN, CONNECT_STRING, API_STRING")
     sys.exit()
 else:
     sid = os.getenv('SID')
